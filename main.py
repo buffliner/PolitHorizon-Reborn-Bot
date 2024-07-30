@@ -2,7 +2,7 @@
 
 import aiogram
 
-botToken = "7383302520:AAF8gRNYX31Xl7C7Z__ArVAlA-JVj31WwME"
+botToken = "BOT_TOKEN"
 
 async def main():
     pass
