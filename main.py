@@ -1,8 +1,17 @@
-#PolitHorizon-Reborn Telegram Bot v1.0
+import asyncio
+import logging
 
-import aiogram
+from aiogram import Bot, Dispatcher
 
-botToken = "BOT_TOKEN"
+import config
+from handlers import router
 
 async def main():
-    pass
+    bot = Bot(token=config.botToken)
+    dp = Dispatcher()
+    dp.include_router(router)
+    await dp.start_polling(bot)
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+    asyncio.run(main())
